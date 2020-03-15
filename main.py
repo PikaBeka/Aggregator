@@ -1,3 +1,3 @@
-import parsing
+from packages import AkmolaParse
 
 AkmolaParse()
