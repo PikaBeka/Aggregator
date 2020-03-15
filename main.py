@@ -1,3 +1,3 @@
 from packages import AkmolaParse
 
-AkmolaParse()
+print(AkmolaParse())

@@ -42,10 +42,5 @@ def AkmolaParse():
 
         i += 1
 
-    for d in data:
-        print(d)
-        print('\n')
-
-
-    print("articles found :" + str(len(data)))
+    return data
         
