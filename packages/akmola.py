@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import json
 
 
 def AkmolaParse(): 
@@ -37,10 +38,15 @@ def AkmolaParse():
             date = result.find('span').text
             title = result.find('a').text.strip()
             shortText = result.find('div').text.strip()
-            url = 'http://astana.gov.kz/' + result.find('a')['href']
-            data.append((date, title, shortText, url))
+            url = "http://astana.gov.kz/" + result.find('a')['href']
+            d = {
+                'date': date,
+                'title': title,
+                'shortText': shortText,
+                'url': url
+            }
+            data.append(d)
 
         i += 1
-
     return data
         
