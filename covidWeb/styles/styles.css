@@ -1,0 +1,39 @@
+body{
+    background-color: #fcfcfc;
+}
+
+.wrapper{
+    margin: 10px 40px 10px 40px;
+}
+
+#statistics{
+    text-align:justify;
+}
+
+#statistics::after{
+    content:' '; 
+    display:inline-block; 
+    width: 100%; 
+    height: 0 
+}
+
+#statistics > div {
+    display:inline-block
+}
+
+.circle{
+    border-radius: 50%;
+    color:white;
+}
+
+#active_cases{
+    background-color: red;
+}
+
+#healed{
+    background-color: green;
+}
+
+#death{
+    background-color: black;
+}
