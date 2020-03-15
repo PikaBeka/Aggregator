@@ -10,4 +10,11 @@ type News struct{
 
 type ReturnType struct{
 	NewsList []News
+	WorldData Data
+}
+
+type Data struct {
+	Cases int `json:"cases"`
+	Deaths int `json:"deaths"`
+	Recovered int `json:"recovered"`
 }

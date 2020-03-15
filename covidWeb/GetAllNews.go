@@ -1,10 +1,10 @@
 package main
 
 import(
-	"fmt"
 	"net/http"
 	"io/ioutil"
-
+	"encoding/json"
+	"fmt"
 )
 
 func GetAllNews() (ReturnType, error) {
@@ -23,5 +23,24 @@ func GetAllNews() (ReturnType, error) {
 	json.Unmarshal([]byte(body), &news)
 
 	data.NewsList = news
+
+	///News enddd
+	
+	////Data about world cases
+	var worldData Data
+	r, err2 := http.Get("https://corona.lmao.ninja/all")
+	if err2 != nil {
+		return data, err2
+	}
+	defer r.Body.Close()
+	worldbody, err3 := ioutil.ReadAll(r.Body)
+	if err3 != nil {
+		return data, err3
+	}
+	json.Unmarshal([]byte(worldbody), &worldData)
+
+	data.WorldData = worldData
+
+	////
 	return data, nil
 }
