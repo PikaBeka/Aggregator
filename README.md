@@ -10,6 +10,6 @@ The app was implemented in a team of me and <a href="https://github.com/PikaBeka
 The app consists two parts<br>
 <strong>1)Parser</strong>: the parser of official Kazakhstani governmential websites. Written in python using the BeautifulSoap
 library for parsing the website and Flask for creating the REST API.<br>
-<strong>1)Web page</strong>: the webpage that shows the parsed information and world statistics
+<strong>2)Web page</strong>: the webpage that shows the parsed information and world statistics
 <hr>
 #stay_home
